@@ -1,0 +1,92 @@
+.prices {
+  position: relative;
+  width: 100%;
+  min-height: 851px;
+  margin-bottom: 10px;
+  padding: 118px 0 200px;
+  background-image: linear-gradient(transparent 88.6%, $white 12.2%);
+  background-color: $light-gray;
+
+  &::before {
+    @include pseudo;
+
+    bottom: 0;
+    right: 0;
+    width: 321px;
+    height: 384px;
+    background-image: url("../img/dumbbells-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 100% 64%;
+
+    @include retina {
+      background-image: url("../img/dumbbells-desktop@2x.png");
+      background-size: 89.5% auto;
+    }
+  }
+}
+
+.prices h2 {
+  @include title-desktop;
+
+  margin: 0;
+  padding-right: 2px;
+  padding-bottom: 39px;
+  text-align: center;
+}
+
+@media (max-width: $tablet-width) {
+  .prices {
+    min-height: 1879px;
+    margin-bottom: 0;
+    padding-top: 98px;
+    padding-bottom: 160px;
+    background-image: linear-gradient(transparent 94.7%, $white 5.35%);
+    background-color: $light-gray;
+
+    &::before {
+      @include pseudo;
+
+      bottom: 0;
+      right: 0;
+      width: 314px;
+      height: 366px;
+      background-image: url("../img/dumbbells-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-position: 100% 68%;
+
+      @include retina {
+        background-image: url("../img/dumbbells-tablet@2x.png");
+        background-size: 110.5% auto;
+      }
+    }
+  }
+
+  .prices h2 {
+    @include typography (42, 42);
+
+    margin: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .prices {
+    min-height: 1487px;
+    margin-bottom: 70px;
+    padding-top: 68px;
+    padding-bottom: 35px;
+    background-image: none;
+
+    &::before {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .prices h2 {
+    @include typography (32, 32);
+    padding-bottom: 22px;
+  }
+}

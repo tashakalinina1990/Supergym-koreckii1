@@ -1,0 +1,160 @@
+.contacts {
+  width: 50%;
+  min-height: 337px;
+  padding: 69px 0 45px 120px;
+}
+
+.contacts h2 {
+  padding-bottom: 41px;
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 4px;
+}
+
+.contacts__wrapper div {
+  width: 37%;
+  margin-right: 26.4%;
+
+  &:nth-of-type(2n) {
+    width: 30%;
+    margin-right: 0;
+  }
+}
+
+.contacts__address {
+  position: relative;
+
+  &::before {
+    @include pseudo;
+
+    top: 6px;
+    right: -62px;
+    width: 1px;
+    height: 102px;
+    background-color: $gray-blue;
+  }
+}
+
+.contacts h3 {
+  @include typography (16, 24);
+
+  margin: 0;
+  padding-bottom: 3px;
+  font-weight: 700;
+  color: $very-dark-blue;
+}
+
+.contacts p,
+.contacts address {
+  @include typography (14, 21);
+
+  margin: 0;
+  padding-bottom: 18px;
+  font-weight: 400;
+  color: $very-dark-blue;
+}
+
+.contacts address {
+  font-style: normal;
+}
+
+.contacts a {
+  color: $very-dark-blue;
+}
+
+@media (max-width: $tablet-width) {
+  .contacts {
+    width: 100%;
+    min-height: 324px;
+    padding: 0;
+  }
+
+  .contacts__container {
+    width: 68%;
+    margin: 0 auto;
+    padding: 69px 20px 43px 10px;
+  }
+
+  .contacts h2 {
+    padding-bottom: 33px;
+  }
+
+  .contacts h3 {
+    @include typography (20, 30);
+
+    padding-bottom: 6px;
+  }
+
+  .contacts p,
+  .contacts address {
+    @include typography (18, 27);
+
+    padding-bottom: 19px;
+  }
+
+  .contacts__wrapper {
+    padding-left: 0;
+  }
+
+  .contacts__wrapper div {
+    width: 45%;
+    margin-right: 18.8%;
+  }
+
+  .contacts__address::before {
+    right: -46px;
+    height: 131px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .contacts {
+    min-height: 507px;
+  }
+
+  .contacts__container {
+    width: 320px;
+    margin: 0 auto;
+    padding: 69px 15px 20px 15px;
+  }
+
+  .contacts h2 {
+    padding-bottom: 35px;
+  }
+
+  .contacts h3 {
+    @include typography (20, 30);
+
+    padding-bottom: 6px;
+  }
+
+  .contacts__contact h3:last-of-type {
+    margin-top: -2px;
+  }
+
+  .contacts p {
+    padding-bottom: 21px;
+  }
+
+  .contacts address {
+    padding-bottom: 19px;
+  }
+
+  .contacts__wrapper div {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: -2px;
+
+    &:nth-of-type(2n) {
+      width: 100%;
+    }
+  }
+
+  .contacts__address::before {
+    width: 0;
+    height: 0;
+  }
+}

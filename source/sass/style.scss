@@ -1,0 +1,45 @@
+/* ======= */
+/* Helpers */
+/* ======= */
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+/* ====== */
+/* Vendor */
+/* ====== */
+@import "vendor/normalize";
+@import "vendor/swiper-vars";
+@import "vendor/swiper";
+/* ====== */
+/* Common */
+/* ====== */
+@import "common/fonts";
+@import "common/global";
+/* ========== */
+/* Components */
+/* ========== */
+@import "components/container";
+@import "components/button";
+/* ======= */
+/* Modules */
+/* ======= */
+// header
+@import "modules/page-header";
+@import "modules/main-banner";
+// main
+@import "modules/gym";
+@import "modules/prices";
+@import "modules/tabs";
+@import "modules/tab-body";
+@import "modules/promo";
+@import "modules/trainers";
+@import "modules/advantages";
+@import "modules/stock";
+@import "modules/reviews";
+@import "modules/communication-wrapper";
+@import "modules/form";
+@import "modules/contacts";
+// footer
+@import "modules/page-footer";
+@import "modules/nav-list";
+@import "modules/social";

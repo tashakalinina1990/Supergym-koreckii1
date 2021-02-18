@@ -1,0 +1,128 @@
+.form {
+  width: 50%;
+  min-height: 337px;
+  padding: 68px 169px 45px 0;
+  background-color: $very-dark-blue;
+  color: $white;
+}
+
+.form h2 {
+  padding-left: 1px;
+  padding-bottom: 39px;
+  color: $white;
+}
+
+.form fieldset {
+  @include fieldset-reset;
+
+  display: inline-block;
+  width: 46.2%;
+  margin-bottom: 29px;
+  margin-right: 6.3%;
+  vertical-align: middle;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.form input[type="tel"] {
+  margin-right: 0;
+}
+
+.form input {
+  @include typography (14, 16);
+  @include transition;
+
+  width: 100%;
+  padding: 5px 5px 5px 0;
+  background-color: transparent;
+  color: $white;
+  border: 1px solid transparent;
+  border-bottom: 1px solid $gray-blue;
+  border-radius: 0;
+
+  &:hover {
+    border-bottom: 1px solid rgba($white, 0.7);
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid rgba($white, 0.3);
+  }
+
+  &::placeholder {
+    color: $white;
+    opacity: 1;
+  }
+}
+
+.form button {
+  @include typography (14, 16);
+
+  padding: 16px 10px;
+  border: 3px solid $white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .form {
+    width: 100%;
+    min-height: 324px;
+    padding: 0;
+  }
+
+  .form__container {
+    width: 68%;
+    margin: 0 auto;
+    padding: 69px 38px 20px 9px;
+  }
+
+  .form h2 {
+    padding-bottom: 32px;
+  }
+
+  .form fieldset {
+    width: 43.5%;
+    margin-right: 11.7%;
+  }
+
+  .form button {
+    padding: 17px 10px 16px 8px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    min-height: 386px;
+  }
+
+  .form__container {
+    width: 320px;
+    margin: 0 auto;
+    padding: 69px 14px 20px;
+  }
+
+  .form h2 {
+    padding-bottom: 34px;
+  }
+
+  .form fieldset {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+
+  .form button {
+    margin-top: 6px;
+  }
+}

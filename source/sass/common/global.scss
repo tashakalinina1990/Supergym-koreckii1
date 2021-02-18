@@ -1,0 +1,62 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-width: $mobile-min-width;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $Roboto-Condensed;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  @include transition;
+  @include interaction;
+
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+svg {
+  fill: currentColor;
+}
+
+// Костыль для Swiper
+main {
+  min-width: 0;
+}

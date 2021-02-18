@@ -1,0 +1,63 @@
+.communication-wrapper {
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(to right, $very-dark-blue 50%, transparent 50%);
+
+  &::before {
+    @include pseudo;
+
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to left, $gray-blue 50%, transparent 50%);
+  }
+}
+
+.communication-wrapper__container.container {
+  padding: 0 9px;
+}
+
+.communication-wrapper__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.communication-wrapper h2 {
+  @include title-desktop;
+
+  margin: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .communication-wrapper {
+    width: 100%;
+    background-image: none;
+    border-top: none;
+
+    &::before {
+      background-image: none;
+    }
+  }
+
+  .communication-wrapper__container.container {
+    padding: 0;
+  }
+
+  .communication-wrapper__container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .communication-wrapper h2 {
+    @include typography (42, 42);
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .communication-wrapper h2 {
+    @include typography (32, 32);
+  }
+}

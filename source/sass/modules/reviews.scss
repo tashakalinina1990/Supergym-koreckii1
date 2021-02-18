@@ -1,0 +1,214 @@
+.reviews {
+  padding-top: 58px;
+  padding-bottom: 80px;
+}
+
+.reviews h2 {
+  @include title-desktop;
+
+  margin: 0;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.reviews__nav-wrapper {
+  position: relative;
+  width: 55.2%;
+  margin: 0 auto;
+}
+
+.reviews__swiper-shadow-box {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.reviews__swiper-slide {
+  width: 100%;
+  height: 100%;
+  padding: 54px 60px 38px 170px;
+  background-color: $very-blue;
+  color: $white;
+  box-sizing: border-box;
+  box-shadow: 0 0 40px rgba($very-blue, 0.2);
+}
+
+.reviews .reviews__button-next,
+.reviews .reviews__button-prev {
+  @include transition;
+
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  width: 16px;
+  height: 32px;
+  margin-top: -16px;
+  background: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 1px solid $light-gray-red;
+    outline-offset: 3px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.reviews .reviews__button-prev {
+  left: -16px;
+}
+
+.reviews .reviews__button-next {
+  right: -16px;
+  transform: rotate(180deg);
+}
+
+.reviews__swiper-slide h3 {
+  @include typography (20, 30);
+
+  position: relative;
+  margin: 0;
+  padding-bottom: 12px;
+  font-weight: 700;
+
+  &::before {
+    @include pseudo;
+
+    top: 8px;
+    left: -108px;
+    width: 80px;
+    height: 80px;
+    background: url("../img/reviews@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $gray;
+    border-radius: 50%;
+
+    @include retina {
+      background-image: url("../img/reviews@2x.png");
+    }
+  }
+}
+
+.reviews__swiper-slide p {
+  @include typography (16, 22);
+
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: $tablet-width) {
+  .reviews {
+    padding-top: 37px;
+    padding-bottom: 60px;
+  }
+
+  .reviews h2 {
+    @include typography (42, 42);
+
+    padding-bottom: 1px;
+  }
+
+  .reviews__nav-wrapper {
+    width: 95.14%;
+  }
+
+  .reviews .reviews__swiper-slide {
+    width: 100%;
+    padding: 54px 62px 38px 173px;
+    box-sizing: border-box;
+  }
+
+  .reviews__swiper-slide p {
+    max-width: 611px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .reviews {
+    padding-top: 19px;
+    padding-bottom: 30px;
+  }
+
+  .reviews .container {
+    padding: 0 7px;
+  }
+
+  .reviews h2 {
+    @include typography (32, 32);
+
+    padding-bottom: 3px;
+  }
+
+  .reviews__nav-wrapper {
+    width: 100%;
+  }
+
+  .reviews .reviews__swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 48px 25px 10px;
+    box-sizing: border-box;
+  }
+
+  .reviews h3 {
+    @include typography (20, 26);
+
+    position: relative;
+    display: grid;
+    align-items: center;
+    min-height: 74px;
+    padding-left: 99px;
+    padding-bottom: 22px;
+    font-weight: 700;
+
+    &::before {
+      @include pseudo;
+
+      top: -8px;
+      left: 16px;
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  .reviews p {
+    @include typography (16, 22);
+
+    margin-bottom: 27px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .reviews .reviews__button-next,
+  .reviews .reviews__button-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    width: 17px;
+    height: 18px;
+    margin-top: -9px;
+  }
+
+  .reviews .reviews__button-next {
+    right: 8px;
+  }
+
+  .reviews .reviews__button-prev {
+    left: 8px;
+  }
+}

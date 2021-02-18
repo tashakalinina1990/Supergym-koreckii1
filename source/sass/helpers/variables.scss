@@ -1,0 +1,43 @@
+// bp
+$mobile-min-width: 320px;
+$mobile-width: 767px;
+$tablet-width: 1199px;
+
+//resolution
+$retina: 2dppx;
+
+//transition
+$trans-speed: 0.2s;
+$trans-curve: ease-in;
+
+// font-family
+$Roboto-Condensed: "Roboto Condensed", "Arial", sans-serif;
+$Bebas-Neue: "Bebas Neue", "Verdana", sans-serif;
+
+// colors
+$white: #ffffff;
+$black: #000000;
+$mostly-black: #030a1a;
+$blue: #003d85;
+$medium-blue: #00359f;
+$very-light-blue: #0041ca;
+$very-dark-blue: #102654;
+$darken-blue: #01014a;
+$dark-blue: #14367a;
+$very-blue: #1c3374;
+$strong-blue: #003eb7;
+$light-dark-blue: #103aae;
+$vivid-blue: #2e35ac;
+$sapphirine-blue: #2a3b63;
+$red: #b80027;
+$dark-pink: #d10a42;
+$darker-pink: #d10a47;
+$vivid-red: #ed0233;
+$light-gray: #f8f9fc;
+$very-light-gray: #e8e8e8;
+$light-dark-gray: #ced1d4;
+$blue-gray: #b5d4f2;
+$gray: #787878;
+$light-gray-red: #afafaf;
+$gray-blue: #74819c;
+$light-blue: #495a7d;

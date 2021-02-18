@@ -1,0 +1,62 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button-reset {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin fieldset-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin transition($curve: $trans-curve, $speed: $trans-speed) {
+  transition: all $trans-speed $trans-curve;
+}
+
+@mixin retina {
+  @media (min-resolution: $retina) {
+    @content;
+  }
+}
+
+@mixin title-desktop {
+  @include typography (49, 49);
+
+  font-family: $Bebas-Neue;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $very-dark-blue;
+  letter-spacing: 0.03em;
+}
+
+@mixin interaction($hover: 0.7, $active: 0.3) {
+  &:hover,
+  &:focus {
+    opacity: $hover;
+  }
+
+  &:active {
+    opacity: $active;
+  }
+}
+
+@mixin typography($fs, $lh) {
+  font-size: rem($fs);
+  line-height: rem($lh);
+}

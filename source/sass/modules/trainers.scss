@@ -1,0 +1,443 @@
+.trainers {
+  padding: 118px 0 85px;
+  color: $white;
+}
+
+.trainers .container {
+  width: 91.5%;
+}
+
+.trainers__nav-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.trainers__info {
+  display: none;
+}
+
+.trainers h3 {
+  @include typography (18, 27);
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding-top: 80.6%;
+  font-weight: 700;
+  text-align: center;
+  color: $white;
+}
+
+.trainers__swiper-slide {
+  box-sizing: border-box;
+}
+
+.trainers__swiper-shadow-box {
+  width: 100%;
+  padding: 35px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &:hover {
+    .trainers__slide-wrapper {
+      @include transition;
+
+      box-shadow: 0 0 35px rgba($sapphirine-blue, 0.17);
+    }
+
+    .trainers__info {
+      position: relative;
+      z-index: 2;
+      display: block;
+      margin-top: -4px;
+    }
+
+    h3 {
+      padding-top: 0;
+    }
+
+    .trainers__slide-image::before {
+      @include pseudo;
+      @include transition;
+
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($very-dark-blue, 0.89);
+    }
+  }
+}
+
+.trainers__slide-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 113.08%;
+}
+
+.trainers__slide-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 51px 10px 22px;
+}
+
+.trainers__swiper-slide--anna .trainers__slide-image {
+  background: url("../img/anna-desktop@1x.jpg") no-repeat top center;
+  background-color: $light-dark-gray;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/anna-desktop@2x.jpg");
+    background-size: cover;
+  }
+}
+
+.trainers__swiper-slide--alex .trainers__slide-image {
+  background: url("../img/alex-desktop@1x.jpg") no-repeat top center;
+  background-color: $light-dark-gray;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/alex-desktop@2x.jpg");
+    background-size: cover;
+  }
+}
+
+.trainers__swiper-slide--alexander .trainers__slide-image {
+  background: url("../img/alexander-desktop@1x.jpg") no-repeat top center;
+  background-color: $light-dark-gray;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/alexander-desktop@2x.jpg");
+    background-size: cover;
+  }
+}
+
+.trainers__swiper-slide--maria .trainers__slide-image {
+  background: url("../img/maria-desktop@1x.jpg") no-repeat top center;
+  background-color: $light-dark-gray;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/maria-desktop@2x.jpg");
+    background-size: cover;
+  }
+}
+
+.trainers h2 {
+  @include title-desktop;
+
+  margin: 0;
+  padding-bottom: 17px;
+  padding-left: 37px;
+}
+
+.trainers__info p {
+  @include typography (16, 24);
+
+  margin: 0;
+  padding-bottom: 34px;
+  font-weight: 400;
+  text-align: center;
+  color: #b6bdcc;
+}
+
+.trainers__info ul {
+  @include list-reset;
+
+  padding-left: 61px;
+  padding-right: 22px;
+  text-align: left;
+}
+
+.trainers__info li {
+  @include typography (14, 21);
+
+  position: relative;
+  padding-bottom: 13px;
+  font-weight: 400;
+  color: $white;
+
+  &::before {
+    position: absolute;
+    content: "●";
+    top: -1px;
+    left: -17px;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.trainers__button-prev,
+.trainers__button-next {
+  @include transition;
+
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  width: 16px;
+  height: 32px;
+  margin-top: -16px;
+  background: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 1px solid $light-gray-red;
+    outline-offset: 3px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.trainers__button-prev {
+  left: -21px;
+}
+
+.trainers__button-next {
+  right: -21px;
+  transform: rotate(180deg);
+}
+
+.trainers__button-prev.swiper-button-prev.swiper-button-disabled,
+.trainers__button-next.swiper-button-next.swiper-button-disabled {
+  pointer-events: none;
+}
+
+@media (max-width: 1300px) {
+  .trainers__slide-image {
+    padding-top: 20px;
+  }
+
+  .trainers h3 {
+    padding-top: 91%;
+  }
+
+  .trainers__info p {
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .trainers {
+    padding-top: 99px;
+    padding-bottom: 70px;
+  }
+
+  .trainers h2 {
+    @include typography (42, 42);
+
+    padding-bottom: 11px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .trainers__swiper-shadow-box {
+    padding: 30px;
+
+    &:hover .trainers__slide-wrapper {
+      box-shadow: 0 0 30px rgba($sapphirine-blue, 0.17);
+    }
+  }
+
+  .trainers__nav-wrapper {
+    width: 91.63%;
+  }
+
+  .trainers__slide-wrapper {
+    padding-bottom: 109.7%;
+  }
+
+  .trainers__slide-image {
+    padding-top: 51px;
+  }
+
+  .trainers__swiper-slide--alexander .trainers__slide-image {
+    background: url("../img/alexander-tablet@1x.jpg") no-repeat top center;
+    background-color: $light-dark-gray;
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/alexander-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .trainers__swiper-slide--maria .trainers__slide-image {
+    background: url("../img/maria-tablet@1x.jpg") no-repeat top center;
+    background-color: $light-dark-gray;
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/maria-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .trainers__slide-image:focus h3,
+  .trainers__slide-image:hover h3 {
+    padding-right: 16px;
+  }
+
+  .trainers h3 {
+    padding-top: 78%;
+    padding-left: 8px;
+  }
+
+  .trainers__info p {
+    padding-right: 8px;
+    padding-bottom: 60px;
+  }
+
+  .trainers__button-prev {
+    left: -26px;
+  }
+
+  .trainers__button-next {
+    right: -26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trainers h3 {
+    padding-top: 78%;
+  }
+
+  .trainers__info p {
+    padding-bottom: 34px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .trainers {
+    padding-top: 69px;
+    padding-bottom: 35px;
+  }
+
+  .trainers .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .trainers__nav-wrapper {
+    width: 92.5%;
+  }
+
+  .trainers__swiper-shadow-box {
+    padding: 35px;
+
+    &:hover .trainers__slide-wrapper {
+      box-shadow: 0 0 35px rgba($sapphirine-blue, 0.17);
+    }
+  }
+
+  .trainers__slide-image {
+    padding-top: 80px;
+    padding-bottom: 12px;
+  }
+
+  .trainers__slide-image:focus h3,
+  .trainers__slide-image:hover h3 {
+    padding-right: 0;
+  }
+
+  .trainers__swiper-slide--alexander .trainers__slide-image {
+    background: url("../img/alexander-mobile@1x.jpg") no-repeat top center;
+    background-color: $light-dark-gray;
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/alexander-mobile@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .trainers__slide-wrapper {
+    padding-bottom: 121.24%;
+  }
+
+  .trainers__info ul {
+    padding-left: 40px;
+    padding-right: 18px;
+  }
+
+  .trainers__info li {
+    @include typography (14, 21);
+
+    padding-bottom: 13px;
+    font-weight: 400;
+    color: $white;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .trainers h2 {
+    @include typography (32, 32);
+
+    padding: 0 0 8px 0;
+    text-align: center;
+  }
+
+  .trainers h3 {
+    padding-top: 100%;
+    padding-left: 0;
+  }
+
+  .trainers__info p {
+    margin-top: -4px;
+    padding-bottom: 34px;
+    padding-right: 0;
+  }
+
+  .trainers__button-prev,
+  .trainers__button-next {
+    z-index: 5;
+    margin-top: -10px;
+    width: 16px;
+    height: 20px;
+  }
+
+  .trainers__button-prev {
+    left: 3px;
+  }
+
+  .trainers__button-next {
+    right: 3px;
+  }
+}
+
+@media (max-width: 626px) {
+  .trainers h3 {
+    padding-top: 95%;
+  }
+}
+
+@media (max-width: 540px) {
+  .trainers h3 {
+    padding-top: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .trainers__slide-image {
+    padding-top: 41px;
+  }
+
+  .trainers h3 {
+    padding-top: 90%;
+  }
+}

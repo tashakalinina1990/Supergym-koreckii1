@@ -1,0 +1,292 @@
+.stock {
+  padding: 118px 0 60px;
+  background-color: $white;
+}
+
+.stock h2 {
+  @include title-desktop;
+
+  margin: 0;
+  padding-bottom: 52px;
+  text-align: center;
+}
+
+.stock ul {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.stock__item {
+  width: 48.3%;
+}
+
+.stock__info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 52px 45px 47px;
+  background-color: $vivid-red;
+  color: $white;
+}
+
+.stock__info h3 {
+  @include typography (70, 109);
+
+  position: relative;
+  margin: 0;
+  font-weight: 700;
+}
+
+.stock__info span {
+  @include typography (28, 44);
+  position: absolute;
+  top: -19px;
+  left: 0;
+}
+
+.stock__info p {
+  @include typography (18, 25);
+
+  margin: 0;
+  margin-top: -1px;
+  padding-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+
+.stock__link {
+  position: relative;
+  width: min-content;
+  margin-top: auto;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  &::before {
+    @include pseudo;
+
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $very-blue;
+  }
+}
+
+.stock__info .stock__link {
+  @include typography (14, 16);
+
+  color: $white;
+
+  &::before {
+    background-color: $white;
+  }
+}
+
+.stock__img-wrapper {
+  width: 50%;
+  background-color: $blue-gray;
+}
+
+.stock__img-wrapper img {
+  height: 100%;
+}
+
+.stock__item--main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stock__item--secondary {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $very-blue;
+  background-color: $white;
+}
+
+.stock__secondary {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 211px;
+  margin-bottom: 40px;
+  padding: 20px 28px 30px;
+  border: 7px solid;
+  border-image-source: linear-gradient(148.82deg, $dark-pink 0.85%, $medium-blue 100%);
+  border-image-slice: 1;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.stock__item--secondary h3 {
+  @include typography (26, 34);
+
+  margin: 0;
+  padding-bottom: 6px;
+  font-weight: 700;
+}
+
+.stock__item--secondary p {
+  @include typography (16, 22);
+
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.stock__item--secondary .stock__link {
+  @include typography (12, 14);
+
+  font-weight: 700;
+  color: $very-blue;
+}
+
+@media (max-width: $tablet-width) {
+  .stock {
+    padding-top: 99px;
+    padding-bottom: 22px;
+  }
+
+  .stock h2 {
+    @include typography (42, 42);
+
+    padding-bottom: 41px;
+  }
+
+  .stock__item--main {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .stock__info {
+    width: 41.15%;
+    padding-bottom: 46px;
+  }
+
+  .stock__info p {
+    margin-top: 0;
+  }
+
+  .stock__info .stock__link::before {
+    bottom: -1px;
+  }
+
+  .stock__item--secondary {
+    flex-direction: row;
+    width: 100%;
+    min-height: 211px;
+    margin-bottom: 40px;
+  }
+
+  .stock__item--secondary h3 {
+    padding-bottom: 7px;
+  }
+
+  .stock__secondary--first p {
+    max-width: 75%;
+  }
+
+  .stock__img-wrapper {
+    width: 58.85%;
+  }
+
+  .stock__secondary {
+    width: 47.8%;
+    margin-right: 4.2%;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .stock__img-wrapper img {
+    height: 462px;
+    object-position: center top;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .stock {
+    padding-top: 69px;
+    padding-bottom: 10px;
+  }
+
+  .stock h2 {
+    @include typography (32, 32);
+
+    padding-left: 1px;
+    padding-bottom: 43px;
+  }
+
+  .stock__item--main {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .stock__item--secondary {
+    flex-direction: row;
+    width: 100%;
+    min-height: 211px;
+    margin-bottom: 40px;
+  }
+
+  .stock__info {
+    width: 100%;
+    min-height: 299px;
+    text-align: center;
+  }
+
+  .stock__info h3 {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .stock__info span {
+    left: 80px;
+  }
+
+  .stock__info p {
+    margin-top: -5px;
+  }
+
+  .stock__link {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stock__img-wrapper {
+    width: 100%;
+  }
+
+  .stock__img-wrapper img {
+    height: auto;
+  }
+
+  .stock__secondary {
+    width: 100%;
+    padding: 31px 35px 41px;
+    margin-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 35px;
+    }
+  }
+
+  .stock__secondary--first p {
+    max-width: none;
+  }
+}

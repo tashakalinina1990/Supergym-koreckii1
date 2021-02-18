@@ -1,0 +1,237 @@
+.tab-body {
+  display: none;
+}
+
+.tab-body--current {
+  display: block;
+}
+
+.tab-body__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tab-body__item {
+  @include transition;
+
+  position: relative;
+  z-index: 2;
+  width: 31.01%;
+  min-height: 446px;
+  margin-right: 3.47%;
+  margin-bottom: 30px;
+  padding: 55px 69px 60px;
+  background-color: $white;
+  border: 7px solid transparent;
+  outline: none;
+
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+  &:hover,
+  &:focus-within {
+    border: 7px solid;
+    border-image-source: linear-gradient(148.82deg, $dark-pink 0.85%, $medium-blue 100%);
+    border-image-slice: 1;
+  }
+}
+
+.tab-body__item h3 {
+  @include typography (26, 29);
+
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+  color: $very-dark-blue;
+}
+
+.tab-body__item p {
+  @include typography (16, 24);
+
+  margin: 0;
+  padding-bottom: 12px;
+  font-weight: 400;
+  text-align: center;
+  color: $light-blue;
+}
+
+.tab-body__item strong {
+  @include typography (60, 90);
+
+  position: relative;
+  padding-right: 45px;
+  font-weight: 700;
+  color: $light-dark-blue;
+
+  &::before {
+    @include pseudo;
+
+    top: 15px;
+    right: 0;
+    width: 30px;
+    height: 42px;
+    background-image: url("../img/ruble.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.tab-body__item p:nth-last-of-type(1) {
+  margin-top: -108px;
+  margin-bottom: 22px;
+}
+
+.tab-body__item p:nth-last-of-type(2) {
+  @include typography (100, 150);
+
+  font-weight: 700;
+  color: $very-light-gray;
+  opacity: 0.48;
+}
+
+.tab-body__link {
+  padding: 26px 12px;
+  color: $very-dark-blue;
+  border: none;
+  box-shadow: 0 0 0 2px $very-dark-blue inset;
+
+  &:hover,
+  &:focus {
+    padding: 26px 12px;
+    background: linear-gradient(97.05deg, $vivid-red 17.6%, $strong-blue 95.31%);
+    color: $white;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+  }
+
+  &:active {
+    background: linear-gradient(97.05deg, $strong-blue 17.6%, $vivid-red 95.31%);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1355px) {
+  .tab-body__item p:nth-last-of-type(2) {
+    @include typography (70, 150);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .tab-body__list {
+    width: 442px;
+    margin: 0 auto;
+  }
+
+  .tab-body__item {
+    width: 100%;
+    min-height: 448px;
+    margin-right: 0;
+    margin-bottom: 40px;
+    padding: 55px 110px;
+    background-color: $white;
+  }
+
+  .tab-body__item h3 {
+    @include typography (26, 29);
+
+    margin: 0;
+    padding-bottom: 10px;
+    font-weight: 700;
+    text-align: center;
+    color: $very-dark-blue;
+  }
+
+  .tab-body__item p:nth-last-of-type(1) {
+    margin-top: -108px;
+    margin-bottom: 22px;
+  }
+
+  .tab-body__item p:nth-last-of-type(2) {
+    @include typography (100, 150);
+
+    font-weight: 700;
+    color: $very-light-gray;
+    opacity: 0.48;
+  }
+}
+
+@media (max-width: 733px) {
+  .tab-body__item strong {
+    @include typography (40, 60);
+
+    padding-right: 40px;
+
+    &::before {
+      top: 11px;
+      right: -2px;
+      width: 34px;
+      height: 49px;
+      background-size: 50% 50%;
+    }
+  }
+
+  .tab-body__item p:nth-last-of-type(2) {
+    font-size: 66px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .tab-body__list {
+    width: 100%;
+  }
+
+  .tab-body__item {
+    width: 100%;
+    max-width: 400px;
+    min-height: 384px;
+    margin: 0 auto 35px;
+    padding: 43px 11.6% 30px;
+  }
+
+  .tab-body__item:nth-of-type(3n) {
+    margin-right: auto;
+  }
+
+  .tab-body__item h3 {
+    @include typography (22, 24);
+
+    padding-bottom: 4.5%;
+  }
+
+  .tab-body__item p {
+    padding-bottom: 4.5%;
+  }
+
+  .tab-body__item strong {
+    @include typography (48, 72);
+
+    padding-right: 32px;
+
+    &::before {
+      top: 13px;
+      right: -3px;
+      width: 24px;
+      height: 33px;
+      background-size: 100% 100%;
+    }
+  }
+
+  .tab-body__item p:nth-last-of-type(3n+1) {
+    margin-top: -84px;
+    margin-bottom: 10%;
+  }
+
+  .tab-body__item p:nth-last-of-type(3n+2) {
+    @include typography (80, 120);
+  }
+
+  .tab-body__link {
+    width: 208px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,135 @@
+.tabs {
+  @include list-reset;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 29.65%;
+  margin: 0 auto;
+  margin-bottom: 39px;
+
+  &::before {
+    @include pseudo;
+
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba($gray, 0.2);
+  }
+}
+
+.tabs__item {
+  margin-right: 13.5%;
+  margin-bottom: 14px;
+
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+
+.tabs__link {
+  @include typography (20, 18);
+
+  position: relative;
+  font-weight: 400;
+  color: rgba($very-dark-blue, 0.5);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+.tabs__link:active,
+.tabs .tabs__link--current {
+  color: $very-dark-blue;
+  border: none;
+  outline: none;
+
+  &::before {
+    @include pseudo;
+
+    bottom: -19px;
+    left: 2px;
+    width: 100%;
+    height: 2px;
+    background-color: $dark-pink;
+  }
+}
+
+.tabs .tabs__link--current {
+  pointer-events: none;
+}
+
+@media (max-width: 1355px) {
+  .tabs {
+    width: 34%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .tabs {
+    width: 335px;
+    margin-bottom: 44px;
+
+    &::before {
+      bottom: 0;
+    }
+  }
+
+  .tabs__item {
+    margin-right: 16.5%;
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .tabs__link {
+    @include typography (18, 27);
+  }
+
+  .tabs__link:focus,
+  .tabs__link:active,
+  .tabs .tabs__link--current {
+    &::before {
+      bottom: -14px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .tabs {
+    width: 290px;
+    margin-bottom: 35px;
+
+    &::before {
+      width: 100%;
+      bottom: -1px;
+    }
+  }
+
+  .tabs__item {
+    margin-right: 45px;
+  }
+
+  .tabs__link {
+    @include typography (16, 24);
+  }
+
+  .tabs__link:focus,
+  .tabs__link:active,
+  .tabs .tabs__link--current {
+    &::before {
+      bottom: -15px;
+      left: 0;
+      width: 113%;
+    }
+  }
+}

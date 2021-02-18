@@ -1,0 +1,17 @@
+.button {
+  @include typography (12, 14);
+  @include transition;
+
+  display: block;
+  width: 100%;
+  padding: 20px 10px 19px;
+  font-family: $Roboto-Condensed;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  background-color: transparent;
+  border: 4px solid $white;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
